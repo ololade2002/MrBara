@@ -1,6 +1,6 @@
 
 import React from 'react'
-import BlogSection from '@/components/blogPage/Blog.jsx';
+import BlogSection from '../../components/BlogPage/Blog';
 
 const Blog = () => {
   return (
