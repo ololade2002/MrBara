@@ -86,8 +86,8 @@ const fiveBlog = BlogData.slice(3,7);
     
          <div className='recent pt-10 flex flex-col gap-6'>
             {fiveBlog.map((blog) => (
-           <Link href={`/blog/${blog.id}`}>
-            <div className="recent-preview  flex flex-row gap-4 items-center" key={blog.id}>
+           <Link href={`/blog/${blog.id}`} key={blog.id}>
+            <div className="recent-preview  flex flex-row gap-4 items-center" >
                
                <Image className='w-6/12 h-[146px] object-cover'  src={blog.img} alt="image" />
                <div className='w-6/12'>

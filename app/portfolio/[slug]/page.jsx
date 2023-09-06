@@ -113,13 +113,13 @@ const selectedPortfolio = portfolioData.find((portfolio) => portfolio.id === par
 
 <div className='px-[1.2rem] pt-8 pb-2' >
 <div className=" flex flex-col md:grid md:grid-cols-3  gap-6 ">
-<div className=''><Image className=' h-[400px] object-cover' src={selectedPortfolio.img1} /></div>
-<div className=''><Image className=' h-[400px] object-cover' src={selectedPortfolio.img2} /></div>
-<div className=''><Image className=' h-[400px] object-cover' src={selectedPortfolio.img4} /></div>
-<div className='col-span-2'><Image className=' h-[400px] object-cover' src={selectedPortfolio.img3} /></div>
-<div className=''><Image className=' h-[400px] object-cover' src={selectedPortfolio.img5} /></div>
-<div className=''><Image className=' h-[400px] object-cover' src={selectedPortfolio.img3} /></div>
-<div className='col-span-2'><Image className=' h-[400px] object-cover' src={selectedPortfolio.img2} /></div>
+<div className=''><Image className=' h-[400px] object-cover'  alt={selectedPortfolio.title} src={selectedPortfolio.img1} /></div>
+<div className=''><Image className=' h-[400px] object-cover' alt={selectedPortfolio.title} src={selectedPortfolio.img2} /></div>
+<div className=''><Image className=' h-[400px] object-cover'  alt={selectedPortfolio.title}src={selectedPortfolio.img4} /></div>
+<div className='col-span-2'><Image className=' h-[400px] object-cover' alt={selectedPortfolio.title} src={selectedPortfolio.img3} /></div>
+<div className=''><Image className=' h-[400px] object-cover' alt={selectedPortfolio.title} src={selectedPortfolio.img5} /></div>
+<div className=''><Image className=' h-[400px] object-cover' alt={selectedPortfolio.title} src={selectedPortfolio.img3} /></div>
+<div className='col-span-2'><Image className=' h-[400px] object-cover' alt={selectedPortfolio.title} src={selectedPortfolio.img2} /></div>
 </div>
 </div>
 </div>

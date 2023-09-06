@@ -12,8 +12,8 @@ const ProjectSection = () => {
     <div className='projectCard flex flex-col md:grid md:grid-cols-3 gap-6 '>
    
     {portfolioData.map((portfolio) => (
-    <Link className='card-a card-af flex flex-col gap-8 space-y-6  lg:gap-0 lg:flex-row items-end flex-wrap justify-between lg:justify-between' href={`/portfolio/${portfolio.id}`} >
-      <ProjectCard key={portfolio.id} {...portfolio} />
+    <Link key={portfolio.id} className='card-a card-af flex flex-col gap-8 space-y-6  lg:gap-0 lg:flex-row items-end flex-wrap justify-between lg:justify-between' href={`/portfolio/${portfolio.id}`} >
+      <ProjectCard  {...portfolio} />
     </Link>
   ))}
     

@@ -32,8 +32,8 @@ const firstTwo = portfolioData.slice(0,3);
     <div className="projectSection max-w-7xl mt-4 mb-16 mx-auto px-[1.2rem] xs:px-[2rem]">
        <div className='projectCard flex flex-col md:grid md:grid-cols-3 gap-6  '>
        {firstTwo.map((portfolio) => (
-      <Link className='card-a flex flex-col gap-6 space-y-6  lg:gap-0 lg:flex-row items-end flex-wrap justify-between lg:justify-between' href={`/portfolio/${portfolio.id}`} >
-       <ProjectCard key={portfolio.id} {...portfolio} />
+      <Link key={portfolio.id} className='card-a flex flex-col gap-6 space-y-6  lg:gap-0 lg:flex-row items-end flex-wrap justify-between lg:justify-between' href={`/portfolio/${portfolio.id}`} >
+       <ProjectCard  {...portfolio} />
       </Link>
      ))}
        </div>
