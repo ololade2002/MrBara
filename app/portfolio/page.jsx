@@ -5,7 +5,7 @@ import PortfolioPage from '@/components/PortolioPage/Portfolio.jsx'
 const Portfolio = () => {
   return (
     <div>
-      <PortfolioPage/>
+    <PortfolioPage/>
     </div>
   )
 }

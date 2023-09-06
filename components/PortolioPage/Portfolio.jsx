@@ -1,13 +1,16 @@
 
 import React from 'react'
-import HeroSection from './HeroSection'
 import HeaderSection from './HeaderSection'
+import ProjectSection from './ProjectSection'
+import Newsletter from '../HomePage/Newsletter'
+
 
 const Portfolio = () => {
   return (
     <div className="portfolio">
         <HeaderSection/>
-        <HeroSection/>
+        <ProjectSection/>
+        <Newsletter/>
     </div>
   )
 }

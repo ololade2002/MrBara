@@ -43,7 +43,7 @@ export default function RootLayout({
       <body className={`${quicksand.variable} ${poppins.variable} ${playfair.variable}`}>
         <Navbar/>
         {children}
-        <Footer/>
+        <Footer/>    
         </body>
     </html>
   )

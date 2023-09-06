@@ -1,0 +1,93 @@
+
+
+.Footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+    padding: 3rem 3.5rem;
+    background-color: black;
+    color: white;
+    
+}
+.Footer>div>h1 {
+    font-size: 23px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 1.6rem;
+}
+.Footer>div>p {
+    opacity: .6;
+    font-size: 16px;
+}
+.footer-icon {
+    display: flex;
+    flex-direction: row;
+    gap: 1.3rem;
+    font-size: 1.2rem;
+    align-items: center;
+}
+.Footer>div:nth-of-type(1) {
+    flex: 1;
+}
+.Footer>div:nth-of-type(1)>p:nth-of-type(1) {
+    order: 1;
+}
+.Footer>div:nth-of-type(1)>p:nth-of-type(2) {
+    order: 2;
+}
+.Footer>div:nth-of-type(2) {
+    flex: 1;
+}
+.post-content {
+    display: flex;
+    gap: .6rem;
+    flex-direction: column;
+}
+.post-content>div>h3 {
+    font-size: 19px;
+    margin-top: -1.2rem;
+    font-weight: 400;
+}
+.post-content>div>h3:hover {
+    opacity: .7;
+}
+.post-content>div>p {
+    opacity: .6;
+}
+
+.Footer>div:nth-of-type(3) {
+    flex: 1;
+    order: 3;
+}
+.Footer>div:nth-of-type(3)>div>p {
+    font-size: 17px; 
+}
+.Footer>div:nth-of-type(3)>div>p:hover {
+    opacity: .7;
+}
+.Footer>div:nth-of-type(3)>div {
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+}
+.f-icon {
+    margin-top: -0.1rem;
+    font-size: 1.3rem;
+}
+
+.Footer>div:nth-of-type(4) {
+    flex: 1;
+
+    order: 4;
+}
+.Footer>div:nth-of-type(4)>div {
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+    justify-content: center;
+}
+.Footer>div:nth-of-type(4)>div>h4 {
+    font-size: 17px;
+ 
+}

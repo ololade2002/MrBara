@@ -1,83 +1,46 @@
+"use client"
 
-
-import Image from 'next/image';
+import { portfolioData } from '@/utils/utils';
+import ProjectCard from './ProjectCard'
 import React from 'react';
-import img1 from '../../public/h1-13.webp';
-import img2 from '../../public/h2-5.webp';
-import img3 from '../../public/h1-14.webp';
-import {BsArrowRight} from 'react-icons/bs'
 import Link from 'next/link';
+import { Fade } from "react-awesome-reveal";
+
 
 
 const ProjectSection = () => {
+const firstTwo = portfolioData.slice(0,3);
+
   return (
-    <div className="projectSection max-w-7xl  mx-auto p-[2rem]">
-      <h4 className='text-[16px] font-sand text-[#4c4037] uppercase font-[500] tracking-[0.16rem] -mb-2' >Portfolio</h4>
-     <h2 className='text-[3.8rem]  w-[50%] leading-[4.5rem] font-normal font-playfair text-[#000]'>
-      <span className=''>Check Out Some</span> Of Our <span className='font-playfair text-[#4c4037]'>Selected Projects.</span> </h2>
+    <div className="project">
+     <div className='max-w-7xl  mx-auto p-[1.2rem] xs:p-[2rem]'>
+      <Fade cascade direction='up' damping={0.5}>
+     <h4 className='text-[16px] font-sand text-[#4c4037] uppercase font-[500] tracking-[0.16rem] -mb-2' >Portfolio</h4>
+     <div className="flex flex-col md:flex-row justify-between items-left md:items-center">
+     <h2 className='text-[2.3rem] xs:text-[3rem] sm:text-[3.8rem]  lg:w-[50%]  leading-[1.2] sm:leading-[4.5rem] font-normal font-playfair text-[#4c4037]'>
+     Our Favorite Project  </h2>
 
-       <div className="project-body my-20 flex flex-col gap-24">
+     <Link href="/portfolio" className=" f-btn w-auto mt-[0.7rem] md:mt-0 px-5 py-1.5 text-[17px] font-[300] uppercase font-sand overflow-hidden group bg-[#4c4037] relative hover:bg-gradient-to-r hover:from-[#4c4037] hover:to-[#4c4037] text-white hover:ring-2 hover:ring-offset-2 hover:ring-[#4c4037] transition-all ease-out duration-300">
+    <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
+    <span className="relative uppercase">View More</span>
+    </Link> 
+  
+     </div>
+     </Fade> 
+      </div>
 
-       <div className="first flex flex-row items-center gap-12">
-       <div className='w-6/12'>
-        <h5 className='counter-sub'>01</h5>
-        <h1 className='font-[600] text-[30px] uppercase py-3 font-sand text-[#000]'>Cascade High Flats</h1>
-        <p className='text-[#4c4037] opacity-90 leading-normal font-sand font-[500] text-[18px] pb-2 w-[95%]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit lobortis arcu enim urna adipiscing 
-          praesent velit viverra sit semper lorem eu cursus vel hendrerit  elementum morbi curabitur 
-          etiam nibh justo, lorem aliquet donec sed similem lorem ipsum dolor.</p>
-          <Link href='/portfolio/delta' >
-          <button  className='line  text-[18px] opacity-90 text-[#4c4037] font-sand font-[500] my-2 flex flex-row gap-2 items-center'>View More   </button>
-          </Link>
+    <div className="projectSection max-w-7xl mt-4 mb-16 mx-auto px-[1.2rem] xs:px-[2rem]">
+       <div className='projectCard flex flex-col md:grid md:grid-cols-3 gap-6  '>
+       {firstTwo.map((portfolio) => (
+      <Link className='card-a flex flex-col gap-6 space-y-6  lg:gap-0 lg:flex-row items-end flex-wrap justify-between lg:justify-between' href={`/portfolio/${portfolio.id}`} >
+       <ProjectCard key={portfolio.id} {...portfolio} />
+      </Link>
+     ))}
        </div>
-       
-       <div className='w-6/12 relative h-[450px] overflow-hidden'>
-       <Link className='' href='/portfolio/delta'>
-        <Image className=' object-cover hover:scale-110 transition duration-[1.6s] cursor-pointer ' src={img1} alt='img' />
-        </Link>
-       </div>
-       </div>
+      </div>
 
-       <div className="second flex flex-row-reverse items-center gap-12">
-       <div className='w-6/12'>
-        <h5 className='counter-sub'>02</h5>
-        <h1 className='font-[500] text-[35px] uppercase py-4 font-sand text-[#000]'>Smith's Residence</h1>
-        <p className='text-[#000] leading-normal font-sand font-normal text-[18px] pb-2 w-[95%]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit lobortis arcu enim urna adipiscing 
-          praesent velit viverra sit semper lorem eu cursus vel hendrerit  elementum morbi curabitur 
-          etiam nibh justo, lorem aliquet donec sed similem lorem ipsum dolor.</p>
-          <Link href='/portfolio/loridans' >
-          <button  className='line text-[18px] text-[#000] font-sand font-[500] my-2 flex flex-row gap-2 items-center'>View More  <BsArrowRight/> </button>
-          </Link>
-      
-       </div>
-       <div className='w-6/12 relative h-[450px] overflow-hidden'>
-       <Link href='/portfolio/loridans'>
-       <Image className=' object-cover  hover:scale-110 transition duration-[1.6s] cursor-pointer ' src={img2} alt='img' />
-       </Link>
-       </div>
-       </div>
-
-       <div className="third flex flex-row items-center gap-12">
-       <div className='w-6/12'>
-        <h5 className='counter-sub'>03</h5>
-        <h1 className='font-[500] text-[35px] uppercase py-4 font-sand text-[#000]'>La-Noxe Lounge</h1>
-        <p className='text-[#000] leading-normal font-sand font-normal text-[18px] pb-2 w-[95%]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit lobortis arcu enim urna adipiscing 
-          praesent velit viverra sit semper lorem eu cursus vel hendrerit  elementum morbi curabitur 
-          etiam nibh justo, lorem aliquet donec sed similem lorem ipsum dolor.</p>
-          <Link href='/portfolio/lanoxe' >
-          <button  className='line text-[18px] text-[#000] font-sand font-[500] my-2 flex flex-row gap-2 items-center'>View More  <BsArrowRight/> </button>
-          </Link>
-       </div>
-
-       <div className='w-6/12 relative h-[450px] overflow-hidden'>
-       <Link href='/portfolio/lanoxe' >
-       <Image className=' object-cover  hover:scale-110 transition duration-[1.6s] cursor-pointer ' src={img3} alt='img' />
-       </Link>
-       </div>
-       </div>    
-        
-      
-       </div>
-    </div>
+     </div>
+   
   )
 }
 

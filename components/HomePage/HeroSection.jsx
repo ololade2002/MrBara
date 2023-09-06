@@ -1,61 +1,47 @@
 "use client"
-import React, { useState } from 'react';
-import {HeroSectionData} from '@/utils/utils';
-import Image from 'next/image';
-import { CiCircleChevLeft } from 'react-icons/ci';
-import {CiCircleChevRight} from 'react-icons/ci';
-import styled from 'styled-components';
 
+import Image from 'next/image'
+import img from '../../public/team5.jpg'
+import React from 'react'
+import { Fade } from "react-awesome-reveal";
 
 const HeroSection = () => {
-const [selected,setSelected] = useState(0);
-const heroLength = HeroSectionData.length
-
   return (
-    <HeroSectionView className="hero absolute top-0 z-10 w-full">
-    <div>
-   
-   <div className=' overflow-hidden ' >
-   <Image className=' w-full h-[100vh] object-cover  hover:scale-125 transition duration-500  ' src={HeroSectionData[selected].img}/>
-   <div className="absolute top-0 left-0 w-full h-full bg-black opacity-30"></div>
-   </div>
+    <div className='different mb-[2rem]'>
+    <div className='max-w-7xl flex flex-col mb-10 mt-4 sm:my-16  items-center gap-14 lg:flex-row  mx-auto p-[1.2rem] xs:p-[2rem]'>
+     
+    <div className='flex-1 w-full lg:w-6/12 '>
+      <Fade cascade direction='up' damping={0.2} >
+      <p className='text-[#000] pb-3 leading-normal tracking-[0.1rem] font-sand font-[500] text-[16px] xs:text-[16px]  w-[100%] '>WHAT MAKES US DIFFERENT</p>
+      
+      <div className='border-b border-[#eae5e0] '>
+      <h2 className='font-[300] text-[25px] sm:text-[32px]  py-1.5 sm:py-3 font-playfair text-[#4c4037]'>Our Experience</h2>
+      <p className='text-[#4c4037] mb-4 lint leading-normal pb-2 font-sand font-[500] text-[16px] xs:text-[18px]  w-[100%]'>We have over 20 years of experience within the interior design and 
+        decorating industry, approaching each project with enthusiasm and professionalism.</p>
+      </div>
 
-   <HeroTextView className="  absolute z-10">
-    
-    <div className="heroText-1 flex flex-col lg:items-start items-start mx-auto max-w-7xl p-[2rem]   ">
-    <h2 className='text-shadow font-playfair text-white font-[500] lg:text-7xl text-[3.5rem] leading-[4rem] tracking-[0.06rem] text-left pb-5'>{HeroSectionData[selected].title}</h2>
-    <p className='text-shadow font-sand text-white text-[20px] leading-[1.9rem] lg:text-left lg:w-[70%] w-[100%]  pb-5'>{HeroSectionData[selected].text}</p>
-    <button className='bg-[#fff] text-[#000] py-2 px-6 text-[19px] font-sand font-medium'>Explore</button>
+      <div className='border-b mt-4 border-[#eae5e0]'>
+      <h2  className='font-[300] text-[25px] sm:text-[32px]  py-1.5 sm:py-3 font-playfair text-[#4c4037]'>Client Satisfaction</h2>
+      <p className='text-[#4c4037] mb-4  leading-normal font-sand font-[500] text-[16px] xs:text-[18px]  w-[100%]'>Our custom interior design services are offered at competitive pricing
+         while ensuring client satisfaction.</p>
+      </div>
+
+      <div className='border-b mt-4 border-[#eae5e0]'>
+      <h2  className='font-[300] text-[25px] sm:text-[32px]  py-1.5 sm:py-3 font-playfair text-[#4c4037]'>Personalized Process</h2>
+      <p className='text-[#4c4037] mb-4 leading-normal font-sand font-[500] text-[16px] xs:text-[18px]  w-[100%]'>We take pride to effectively communicate and understand the unique needs
+         of each client throughout the design & renovation process</p>
+      </div>
+     
+      </Fade>
     </div>
 
-
-    <div className="arrow  absolute right-0  bottom-0 z-10 gap-5 flex text-white  mr-[5rem] ">
-   <CiCircleChevLeft className='h-10 w-10 hover:text-black' onClick={() => {
-    selected === 0 ? setSelected(heroLength - 1) : setSelected((prev) => prev - 1)
-   }} />
-   <CiCircleChevRight className='h-10  w-10' onClick={() => {
-    selected === heroLength - 1 ? setSelected(0) : setSelected((prev) => prev + 1)
-   }} />
+    <div className='flex-1 w-full lg:w-6/12'>
+      <Image src={img} className='h-[520px] object-cover' alt='img' />
     </div>
 
-
-   </HeroTextView>
     </div>
-    </HeroSectionView>
+    </div>
   )
 }
 
-export default HeroSection;
-
-const HeroSectionView = styled.div`
-  width: 100%;
-`
-
-const HeroTextView = styled.div`
-width: 100%;
-transform: translate(-50%,-50%);
-left: 50%;
-top: 58%;
-`;
-/*
-translate-y-[9rem] justify-end*/
+export default HeroSection

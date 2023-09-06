@@ -1,3 +1,4 @@
+"use client"
 
 import React from 'react'
 import Image from 'next/image'
@@ -5,16 +6,19 @@ import brand1 from '../../public/b-1.png';
 import brand2 from '../../public/b-2.png';
 import brand3 from '../../public/b-3.png';
 import brand4 from '../../public/b-4.png';
+import { Fade } from 'react-awesome-reveal';
 
 const HeroSection = () => {
   return (
  
-  <div className='heroSection mt-[100vh] mx-auto max-w-7xl p-[2rem]  mb-24'>
-  <div className='flex flex-col sm:flex-row'>
+  <div className='heroSection mt-12  mx-auto max-w-7xl p-[1.2rem] xs:p-[2rem]  mb-14'>
+  <div className='flex flex-col lg:flex-row pt-[2rem]'>
 
   <div className='flex-1'>
-  <h4 className='text-[16px] font-sand text-[#4c4037] uppercase font-[500] tracking-[0.16rem] pb-2' >About Us</h4>
-   <h1 className='text-8xl  font-playfair font-[400] text-[#4c4037]'> <span className='text-8xl'>25</span> years of experience</h1>
+    <Fade cascade direction='up' damping={0.5}>
+  <h4 className='text-[16px] font-sand text-[#4c4037] uppercase font-[500] tracking-[0.16rem] -mb-2' >About Us</h4>
+   <h1 className='text-[4rem] leading-[1.2]  pb-8 sm:text-8xl font-playfair font-[400] text-[#4c4037]'> <span className=''>25</span> years of experience</h1>
+   </Fade>
    </div>
 
    <div className='flex-1'>

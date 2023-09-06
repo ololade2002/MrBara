@@ -7,15 +7,15 @@ import { CiLocationOn } from 'react-icons/ci'
 
 const Office = () => {
   return (
-    <div className='p-[2rem]  bg-white mt-24 relative'>
+    <div className='p-[1.2rem] xs:p-[2rem]  bg-white mt-16 sm:mt-24 relative'>
 
-  <div className='flex my-20 flex-row-reverse '>
+  <div className='flex mt-20 mb-[6rem] relative flex-row-reverse '>
 
-  <div className='w-[80%]  '>
-   <Image  src={img} alt='image' />
+  <div className='w-[100%] lg:w-[80%]  '>
+   <Image className='h-[560px] object-cover' src={img} alt='image' />
    </div>
 
-   <div className='bg-white drop-shadow-lg absolute py-12  left-24 top-[26%] px-6 '>
+   <div className='bg-white drop-shadow-lg  absolute py-4 lg:py-12 left-4 top-[20%] sm:left-24  sm:top-[20%] px-6 '>
 
    <div className='flex flex-col items-start justify-center'>
    <h2 className='text-[26px] font-[500] pb-2.5 ml-2 font-sand '>Our Office</h2>

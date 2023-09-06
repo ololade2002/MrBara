@@ -1,18 +1,28 @@
+"use client"
 
-import Image from 'next/image'
 import React from 'react'
-import img from '../../public/team8.jpg'
+import { Parallax } from 'react-parallax'
+
+
+const insideStyles = {
+  background: "white",
+  padding: 20,
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%,-50%)"
+};
+
 
 const HeaderSection = () => {
   return (
   
-   
-      
-    <div className='object-cover top-0 absolute  w-full  '>
-        <Image className= ' h-[100vh] w-full object-cover' src={img} alt='img' />
+    <Parallax bgImage='/team2.jpg' strength={270}>
+    <div style={{ height: 600 }}>
     
     </div>
-  
+  </Parallax>
+   
   )
 }
 
